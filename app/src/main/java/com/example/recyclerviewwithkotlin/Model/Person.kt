@@ -1,6 +1,10 @@
 package com.example.recyclerviewwithkotlin.Model
 
-data class Person(var name: String, var imageUrl: String, var id: String = "")
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
+data class Person(var name: String, var imageUrl: String, var id: String = ""):Parcelable
 
 object persons {
     var persons = listOf<Person>(
